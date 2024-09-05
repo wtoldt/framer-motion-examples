@@ -1,25 +1,12 @@
-import { useAnimate } from 'framer-motion';
-import { Button } from '@/components/Button';
-import { Tile } from '@/components/Tile';
+import { Example1 } from '@/examples/example1/Example1';
 
 export default function App() {
-  const [scope, animate] = useAnimate();
   return (
     <div
       className="flex h-screen w-full flex-col items-start justify-center gap-5 divide-y-4
         divide-slate-400/25"
     >
-      <div className="flex w-full flex-col items-center justify-center gap-2 p-5">
-        <h2 className="text-center text-5xl underline">Flip a tile on click</h2>
-        <Tile ref={scope}>1</Tile>
-        <Button
-          onClick={() => {
-            animate(scope.current, { x: 100 });
-          }}
-        >
-          Flip
-        </Button>
-      </div>
+      <Example1 />
       <div className="flex w-full flex-col items-center justify-center gap-2 p-5">
         <h2 className="text-center text-5xl underline">
           Shake a tile on click
