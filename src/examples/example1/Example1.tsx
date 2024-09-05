@@ -12,9 +12,13 @@ const Example1 = () => {
         Flip a tile on click by toggling a boolean which sets a motion.div
         animate property
       </p>
+      <p className="text-sm italic text-slate-400">
+        Note - when duration is set, must set bounce to get the spring effect
+      </p>
       <motion.div
+        initial={false}
         animate={{ rotateY: flip ? 360 : 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ type: 'spring', duration: 1, bounce: 0.5 }}
       >
         <Tile>1</Tile>
       </motion.div>
