@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* evaluation styles */
+    --ev-unevaluated-text-shadow: inherit;
+    --ev-unevaluated-bg-color: theme(colors.slate.300);
+    --ev-unevaluated-text-color: theme(colors.black);
+
+    --ev-correct-text-shadow: 0 1px 2px theme(colors.green.700);
+    --ev-correct-bg-color: theme(colors.green.500);
+    --ev-correct-text-color: theme(colors.white);
+
+    --ev-present-text-shadow: 0 1px 2px theme(colors.yellow.700);
+    --ev-present-bg-color: theme(colors.yellow.500);
+    --ev-present-text-color: theme(colors.white);
+
+    --ev-absent-text-shadow: 0 1px 2px theme(colors.slate.700);
+    --ev-absent-bg-color: theme(colors.slate.500);
+    --ev-absent-text-color: theme(colors.white);
+  }
+}
+
+@layer components {
+  .evaluation-unevaluated {
+    text-shadow: var(--ev-unevaluated-text-shadow);
+    background-color: var(--ev-unevaluated-bg-color);
+    color: var(--ev-unevaluated-text-color);
+  }
+  .evaluation-correct {
+    --ev-text-shadow: var(--ev-correct-text-shadow);
+    --ev-bg-color: var(--ev-correct-bg-color);
+    --ev-text-color: var(--ev-correct-text-color);
+  }
+
+  .evaluation-present {
+    --ev-text-shadow: var(--ev-present-text-shadow);
+    --ev-bg-color: var(--ev-present-bg-color);
+    --ev-text-color: var(--ev-present-text-color);
+  }
+
+  .evaluation-absent {
+    --ev-text-shadow: var(--ev-absent-text-shadow);
+    --ev-bg-color: var(--ev-absent-bg-color);
+    --ev-text-color: var(--ev-absent-text-color);
+  }
+  .evaluated {
+    text-shadow: var(--ev-text-shadow);
+    background-color: var(--ev-bg-color);
+    color: var(--ev-text-color);
+  }
+}
